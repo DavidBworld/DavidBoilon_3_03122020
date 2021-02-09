@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+@font-face{
+  font-family: 'Roboto';
+  src: url('../polices/Roboto-Regular-webfont.eot');
+  src: url('../polices/Roboto-Regular-webfont.woff') format('woff'),
+       url('../polices/Roboto-Regular-webfont.ttf') format('truetype'),
+       url('../polices/Roboto-Regular-webfont.svg') format('svg');
+}
+@font-face{
+  font-family: 'Shrikhand';
+  src: url('../polices/Shrikhand-Regular.ttf') format('truetype'),
+}
+body{
+  font-family: 'roboto', 'Shrikhand', 'arial', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-icon: #353535;
+$color-search: #eaeaea;
+$color-searchbord: #767676;
+$color-searchback: #f6f6f6;
+
+

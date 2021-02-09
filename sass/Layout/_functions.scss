@@ -1,0 +1,54 @@
+.function{
+    height:auto;
+    padding: 1.5rem 1.1rem 3rem 1.1rem;
+    &__title{
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+    &__main{
+        list-style: none;
+        counter-reset: compteListe;
+        display:grid;
+        grid-template-rows: 3fr;
+        grid-row-gap: 1rem;
+    }
+    &__choice{
+        background: $color-searchback;
+        padding: 1.5rem;
+        box-shadow: 0 2px 7px $color-searchbord;
+        border-radius: 1.25rem;
+        margin-left: -1.8rem;
+        display: flex;
+        align-items: center;
+        position:relative;
+        &::before {
+            counter-increment: compteListe;
+            content: counter( compteListe ) " ";
+            background: $color-primary;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            left: -0.8rem;
+            font-size: 0.8rem;
+          }
+    }
+    &__icon{
+        margin: 0 1.5rem 0 1.1rem;
+        color: $color-searchbord;
+        font-size: 1rem;
+    }
+    &__texte{
+        font-size: 0.9rem;
+    }
+}
+.iconcolor{
+    color: $color-primary;
+}
+.iconsize{
+    font-size: 1.2rem;
+}

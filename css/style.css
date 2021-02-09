@@ -1,0 +1,226 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../polices/Roboto-Regular-webfont.eot");
+  src: url("../polices/Roboto-Regular-webfont.woff") format("woff"), url("../polices/Roboto-Regular-webfont.ttf") format("truetype"), url("../polices/Roboto-Regular-webfont.svg") format("svg");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../polices/Shrikhand-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "roboto", "Shrikhand", "arial", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1rem;
+}
+.logo__top {
+  height: 1.7rem;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 0.8rem 0 0 1.3rem;
+  height: 15rem;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand";
+  font-size: 1.2rem;
+}
+.footer__list {
+  list-style: none;
+  margin-left: -2.4rem;
+  color: white;
+  display: grid;
+  grid-template-rows: 4fr;
+  grid-row-gap: 0.3rem;
+}
+.footer__icon {
+  width: 2rem;
+}
+
+.search {
+  background-color: #eaeaea;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.2rem solid #cecece;
+  box-shadow: inset 0 0.5rem 3rem #d5d5d5;
+}
+.search .search__icon {
+  color: #353535;
+  padding-right: 1rem;
+}
+.search .search__city {
+  color: #353535;
+  font-weight: 600;
+}
+
+.intro {
+  background-color: #f6f6f6;
+  height: 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.intro__title {
+  font-size: 1.5rem;
+  margin: 0rem 4rem 0 4rem;
+  text-align: center;
+}
+.intro__subtitle {
+  margin: 1rem 1rem 2rem 1rem;
+  text-align: center;
+  color: #767676;
+}
+.intro__btn {
+  width: 58%;
+  height: 3rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 7px #767676;
+  background: linear-gradient(-3deg, #9356DC, #FF79DA);
+}
+.intro__btn__txt {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.function {
+  height: auto;
+  padding: 1.5rem 1.1rem 3rem 1.1rem;
+}
+.function__title {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.function__main {
+  list-style: none;
+  counter-reset: compteListe;
+  display: grid;
+  grid-template-rows: 3fr;
+  grid-row-gap: 1rem;
+}
+.function__choice {
+  background: #f6f6f6;
+  padding: 1.5rem;
+  box-shadow: 0 2px 7px #767676;
+  border-radius: 1.25rem;
+  margin-left: -1.8rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.function__choice::before {
+  counter-increment: compteListe;
+  content: counter(compteListe) " ";
+  background: #9356DC;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -0.8rem;
+  font-size: 0.8rem;
+}
+.function__icon {
+  margin: 0 1.5rem 0 1.1rem;
+  color: #767676;
+  font-size: 1rem;
+}
+.function__texte {
+  font-size: 0.9rem;
+}
+
+.iconcolor {
+  color: #9356DC;
+}
+
+.iconsize {
+  font-size: 1.2rem;
+}
+
+.restaurants {
+  background: #f6f6f6;
+  padding: 1.3rem 1.1rem 0 1.1rem;
+  padding-bottom: 4rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: 4fr;
+  grid-row-gap: 1rem;
+}
+
+.card {
+  border-radius: 1rem 1rem 1rem 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 2px 7px #767676;
+  position: relative;
+}
+.card__img {
+  height: 11rem;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.card__badge {
+  background-color: #99E2D0;
+  width: 5rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #2c9c81;
+  font-weight: 600;
+  border-radius: 0.15rem;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  margin: -0.5rem 0 1rem 0;
+}
+.card__content--title {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.card__content--icon {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
