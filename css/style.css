@@ -25,6 +25,70 @@ a {
   text-decoration: none;
 }
 
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes transform-load {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  animation: loader 0.01s;
+  /* Keyframe loader */
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+.loader__item {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  animation: transform-load 0.1s;
+}
+.loader__itemContainer {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+.loader__item--1 {
+  background-color: #9356DC;
+  animation: transform-load 3s 500ms ease-in-out;
+}
+.loader__item--2 {
+  background-color: #FF79DA;
+  animation: transform-load 3s 250ms ease-in-out;
+}
+.loader__item--3 {
+  background-color: #99E2D0;
+  animation: transform-load 3s ease-in-out;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -37,7 +101,7 @@ a {
 .footer {
   background-color: #353535;
   padding: 0.8rem 0 0 1.3rem;
-  height: 15rem;
+  height: 12rem;
 }
 .footer__logo {
   color: white;
@@ -62,16 +126,21 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 0.2rem solid #cecece;
-  box-shadow: inset 0 0.5rem 3rem #d5d5d5;
+  box-shadow: inset 0 3px 4px #c3c3c3;
 }
 .search .search__icon {
   color: #353535;
   padding-right: 1rem;
 }
+.search__form {
+  font-weight: 600;
+}
 .search .search__city {
   color: #353535;
-  font-weight: 600;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  background: #eaeaea;
 }
 
 .intro {
@@ -103,11 +172,13 @@ a {
   cursor: pointer;
   box-shadow: 0 2px 7px #767676;
   background: linear-gradient(-3deg, #9356DC, #FF79DA);
-}
-.intro__btn__txt {
   color: white;
   font-size: 0.9rem;
   font-weight: bold;
+  transition-duration: 1s;
+}
+.intro__btn:hover {
+  transform: scale 1.15;
 }
 
 .function {
@@ -221,6 +292,115 @@ a {
   right: 1.3rem;
   bottom: 2rem;
   font-size: 1.5rem;
+}
+
+.return {
+  position: relative;
+  margin-bottom: 0;
+}
+.return__arrow {
+  position: absolute;
+  left: 1.3rem;
+  bottom: 2.2rem;
+  font-size: 1.2rem;
+}
+
+.banner__img {
+  height: 19rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+.menu__header {
+  margin-top: -4rem;
+  background: #f6f6f6;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+}
+.menu__title {
+  font-family: "Shrikhand";
+  font-size: 1.9rem;
+  padding: 1rem 0 0 1rem;
+}
+.menu__btn {
+  position: absolute;
+  top: 3rem;
+  right: 1.6rem;
+  border: none;
+  background: #f6f6f6;
+}
+
+.menumain {
+  display: grid;
+  grid-template-rows: auto, 3 1fr;
+  grid-row-gap: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+.menumain__title {
+  padding-left: 1rem;
+  font-weight: lighter;
+}
+.menumain__underline {
+  border-bottom: 4px solid #99E2D0;
+  padding-bottom: 0.5rem;
+}
+
+.articlie {
+  display: block;
+}
+
+.menu-card {
+  background-color: #fff;
+  display: flex;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 7px #767676;
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemtranslate 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
+}
+.menu-card__item {
+  flex: 1;
+}
+.menu-card__item__item--title {
+  font-size: 1.2rem;
+}
+.menu-card__price {
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.menu-card__confirmation {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+.delay {
+  animation-delay: 0s;
+}
+
+@keyframes itemtranslate {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

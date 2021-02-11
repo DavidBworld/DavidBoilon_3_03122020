@@ -1,0 +1,86 @@
+.menu{
+    background: $color-searchback;
+    display: flex;
+    flex-direction: column;
+    &__header{
+        margin-top:-4rem;
+        background: $color-searchback;
+        border-radius: 3rem 3rem 0 0;
+        position:relative;
+    }
+    &__title{
+        font-family: 'Shrikhand';
+        font-size: 1.9rem;
+        padding: 1rem 0 0 1rem;
+    }
+    &__btn{
+        position: absolute;
+        top: 3rem;
+        right:1.6rem;
+        border:none;
+        background: $color-searchback;
+    }
+}
+.menumain{
+    display: grid;
+    grid-template-rows: auto, 3(1fr);
+    grid-row-gap: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 1rem;
+    &__title{
+        padding-left: 1rem; 
+        font-weight:lighter;   
+    }
+    &__underline{
+        border-bottom: 4px solid $color-tertiary;
+        padding-bottom: 0.5rem;
+    }
+}
+.articlie{
+    display:block;
+}
+.menu-card{
+    background-color: #fff;
+    display: flex;
+    border-radius: .75rem;
+    box-shadow: 0 2px 7px $color-searchbord;
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemtranslate .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+    &__item{
+        flex:1;
+        &__item--title{
+        font-size: 1.2rem;
+        }
+    }
+    &__price{
+        font-weight: 900;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    &__confirmation{
+    background-color: #99e2d0;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    }
+}
+.delay{
+    animation-delay: 0s;
+}
+@keyframes itemtranslate{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1)
+    }
+}

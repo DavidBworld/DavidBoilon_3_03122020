@@ -1,9 +1,17 @@
+
+
 @import "./Base/baseline";
 
+@import "./Utils/mixins";
+@import "./Utils/keyframes";
+
+@import "./Layout/spiner";
 @import "./Layout/header-footer";
 @import "./Layout/search";
 @import "./Layout/intro";
 @import "./Layout/functions";
 @import "./Layout/restaurants";
+@import "./Layout/header-restaurants";
+@import "./Layout/cartes";
 
-@import "./Utils/mixins";
+

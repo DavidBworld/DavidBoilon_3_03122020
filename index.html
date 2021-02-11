@@ -22,6 +22,13 @@
         <!-- Place your kit's code here -->       
 	</head>
     <body>
+        <div class="loader">
+            <div class="loader__itemContainer">
+              <div class="loader__item loader__item--1"></div>
+              <div class="loader__item loader__item--2"></div>
+              <div class="loader__item loader__item--3"></div>
+            </div>
+        </div>
         <header class="logo">
             <h1 class="logo__title">
                 <a href="index.html"><img class="logo__top" src="./images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood"></a>
@@ -29,19 +36,26 @@
         </header>
 
         <main class="main">
-            <section class="search">
+            <aside class="search">
                 <i class="fas fa-map-marker-alt search__icon"></i>
-                <span class="search__city">Paris, Belleville</span>
-            </section>
+                <form class="search__form" method="post" action="" enctype="multipart/form-data">
+                    <label for="city">Paris,</label>
+                    <select class="search__city" name="city">
+                        <optgroup label="Adresse:">
+                            <option value="Belleville">Belleville</option>
+                            <option value="Pigalle">Pigalle</option>
+                            <option value="Monmartre" selected>Monmartre</option>
+                        </optgroup>
+                    </select>
+            </aside>
 
             <section class="intro">
                 <h2 class="intro__title">Réservez le menu qui vous convient</h2>
                 <p class="intro__subtitle">
                   Découvrez des restaurants d'exception, séléctionnés par nos soins
                 </p>
-                <a class="intro__btn btn" href="">
-                  <p class="intro__btn__txt">Explorer nos restaurants</p>
-                </a>
+                
+                <a class="intro__btn btn">Explorer nos restaurants</a>
             </section>
 
             <section class="function">

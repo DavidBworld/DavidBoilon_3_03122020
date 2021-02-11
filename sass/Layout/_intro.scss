@@ -17,19 +17,11 @@
         color: $color-searchbord;
     }
     &__btn{
-        width:58%;
-        height:3rem;
-        border-radius: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 2px 7px $color-searchbord;
-        background: linear-gradient(-3deg, $color-primary, $color-secondary ); 
-        &__txt{
-            color: white;
-            font-size: 0.9rem;
-            font-weight: bold;
+        @include button;
+        @include button-txt;
+        transition-duration: 1s;
+        &:hover{
+            transform: scale (1.15)
         }
-    }
+    }   
 }

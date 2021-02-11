@@ -1,0 +1,17 @@
+.return{
+    position: relative;
+    margin-bottom: 0;
+    &__arrow{
+        position:absolute;
+        left: 1.3rem;
+        bottom: 2.2rem;
+        font-size:1.2rem;
+    } 
+}
+.banner{
+    &__img{
+        height: 19rem;
+        object-fit: cover;
+        width: 100%;
+    }
+}

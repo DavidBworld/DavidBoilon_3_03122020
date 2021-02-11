@@ -1,0 +1,18 @@
+@mixin button {
+    width:58%;
+    height:3rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $btn-shadow;
+    background: $color-btn; 
+}
+@mixin button-txt {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
