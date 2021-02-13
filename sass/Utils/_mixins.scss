@@ -1,18 +1,53 @@
 @mixin button {
-    width:58%;
-    height:3rem;
-    border-radius: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: $btn-shadow;
-    background: $color-btn; 
+        width:58%;
+        height:3rem;
+        border-radius: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-weight:600;
+        cursor: pointer;
+        box-shadow: 0 2px 7px rgb(118, 118, 118);
+        @include color;
+        position:relative;
+        z-index: 1;
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;  
+            left: 0;
+            border-radius: 3rem;
+            box-shadow: 0 2px 7px rgb(95, 11, 11);
+            background: rgba(247, 245, 245, 0.1);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
 }
-@mixin button-txt {
-    color: white;
-    font-size: 0.9rem;
-    font-weight: bold;
+@mixin color {
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, rgb(255, 121, 217)),
+	color-stop(1, rgb(146, 86, 220))
+);
+background-image: -o-linear-gradient(bottom, rgb(255, 121, 217) 0%, rgb(146, 86, 220) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(255, 121, 217) 0%, rgb(146, 86, 220) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(255, 121, 217) 0%, rgb(146, 86, 220) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(255, 121, 217) 0%, rgb(146, 86, 220) 100%);
+background-image: linear-gradient(to bottom, rgb(255, 121, 217) 0%, rgb(146, 86, 220) 100%);
 }
+
 
 

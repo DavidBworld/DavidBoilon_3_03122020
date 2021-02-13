@@ -10,15 +10,15 @@
         padding-right: 1rem;
     } 
     &__form {
-        font-weight: 600;;
+        font-weight: 600;
+        color: $color-icon;
     }
     .search__city{
         color: $color-icon;
         border: none;
         font-weight: bold;
         font-size: 1rem;
-        background: $color-search ;
-    }
-  }
+        background: $color-search ;            
+    }  
+}
 
- 

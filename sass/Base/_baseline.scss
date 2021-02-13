@@ -1,3 +1,5 @@
+@use "sass:color";
+
 html, body {
     height: 100%;
     margin: 0;
@@ -15,6 +17,7 @@ html, body {
   font-family: 'Shrikhand';
   src: url('../polices/Shrikhand-Regular.ttf') format('truetype'),
 }
+
 body{
   font-family: 'roboto', 'Shrikhand', 'arial', sans-serif;
   width: 100%;
@@ -33,7 +36,7 @@ $color-search: #eaeaea;
 $color-searchbord: #767676;
 $color-searchback: #f6f6f6;
 
-$color-btn : linear-gradient(-3deg, $color-primary, $color-secondary ); 
+$color-btn : linear-gradient(to top, $color-primary 10%, $color-secondary);
 $btn-shadow : 0 2px 7px $color-searchbord;
 
 
