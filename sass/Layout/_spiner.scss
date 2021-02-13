@@ -25,14 +25,17 @@
       &--1 {
         background-color: $color-primary;
         animation: transform-load 3s 500ms ease-in-out;
+        visibility: hidden;
       }
       &--2 {
         background-color: $color-secondary;
         animation: transform-load 3s 250ms ease-in-out;
+        visibility: hidden;
       }
       &--3 {
         background-color: $color-tertiary;
         animation: transform-load 3s ease-in-out;
+        visibility: hidden;
       }
     }
 }

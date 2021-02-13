@@ -11,14 +11,18 @@
     } 
     &__form {
         font-weight: 600;
+        font-size: 0.9rem;
         color: $color-icon;
+        margin-bottom: -0.2rem;
     }
     .search__city{
         color: $color-icon;
+        font-family: 'roboto';
         border: none;
         font-weight: bold;
-        font-size: 1rem;
-        background: $color-search ;            
+        font-size: 0.9rem;
+        background: $color-search ;          
     }  
 }
+
 

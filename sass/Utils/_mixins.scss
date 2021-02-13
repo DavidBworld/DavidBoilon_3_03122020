@@ -29,9 +29,10 @@
             border-radius: 3rem;
             box-shadow: 0 2px 7px rgb(95, 11, 11);
             background: rgba(247, 245, 245, 0.1);
+            /*background: linear-gradient(TO TOP lighten($color-primary,10%) 10%, lighten($color-secondary,100%) 10%);*/
             opacity: 0;
             z-index: -1;
-            transition: opacity 250ms;
+            transition: opacity 300ms ease-in-out;
         }
 }
 @mixin color {

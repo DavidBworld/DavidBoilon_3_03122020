@@ -34,20 +34,24 @@ a {
 }
 @keyframes transform-load {
   0% {
+    visibility: visible;
     opacity: 0;
     transform: translateX(-300px);
   }
   33% {
     opacity: 1;
     transform: translateX(0px);
+    visibility: visible;
   }
   66% {
     opacity: 1;
     transform: translateX(0px);
+    visibility: visible;
   }
   100% {
     opacity: 0;
     transform: translateX(300px);
+    visibility: hidden;
   }
 }
 @keyframes itemtranslate {
@@ -56,6 +60,23 @@ a {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes progress-heart {
+  0% {
+    background-color: #9356DC;
+  }
+  17% {
+    background-color: #9356DC;
+  }
+  24% {
+    background-color: #9356DC;
+  }
+  46% {
+    background-color: #9356DC;
+  }
+  100% {
+    background-color: #9356DC;
   }
 }
 .loader {
@@ -88,14 +109,17 @@ a {
 .loader__item--1 {
   background-color: #9356DC;
   animation: transform-load 3s 500ms ease-in-out;
+  visibility: hidden;
 }
 .loader__item--2 {
   background-color: #FF79DA;
   animation: transform-load 3s 250ms ease-in-out;
+  visibility: hidden;
 }
 .loader__item--3 {
   background-color: #99E2D0;
   animation: transform-load 3s ease-in-out;
+  visibility: hidden;
 }
 
 .logo {
@@ -143,13 +167,16 @@ a {
 }
 .search__form {
   font-weight: 600;
+  font-size: 0.9rem;
   color: #353535;
+  margin-bottom: -0.2rem;
 }
 .search .search__city {
   color: #353535;
+  font-family: "roboto";
   border: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background: #eaeaea;
 }
 
@@ -206,9 +233,10 @@ a {
   border-radius: 3rem;
   box-shadow: 0 2px 7px #5f0b0b;
   background: rgba(247, 245, 245, 0.1);
+  /*background: linear-gradient(TO TOP lighten($color-primary,10%) 10%, lighten($color-secondary,100%) 10%);*/
   opacity: 0;
   z-index: -1;
-  transition: opacity 250ms;
+  transition: opacity 300ms ease-in-out;
 }
 
 .function {
@@ -341,6 +369,11 @@ a {
   width: 100%;
 }
 
+.menus {
+  display: grid;
+  grid-template-rows: 3fr;
+}
+
 .menu {
   background: #f6f6f6;
   display: flex;
@@ -359,23 +392,25 @@ a {
 .menu__title {
   font-family: "Shrikhand";
   font-size: 1.9rem;
-  margin-left: -1rem;
+  margin-left: -0.5rem;
 }
 .menu__btn {
   border: transparent 0px solid;
 }
 
-.menu__purple--test {
-  color: #f6f6f6;
-  background-color: black;
+.menu__purple--test > fa-heart {
+  /*color: $color-searchback;*/
+  background-color: #f6f6f6;
   border-radius: 50%;
+  position: relative;
+  opacity: 1;
 }
-.menu__purple--test::before {
+.menu__purple--test > fa-heart::before {
   content: "";
-  font-weight: bold;
   transition: color 1s ease-out;
+  animation: progress-heart 1000ms ease-in-out;
 }
-.menu__purple--test:hover::before {
+.menu__purple--test > fa-heart:hover::before {
   color: #9356DC;
   cursor: pointer;
 }
@@ -387,6 +422,7 @@ a {
   max-width: 100%;
   overflow: hidden;
   padding: 0 1rem;
+  padding-bottom: 2rem;
 }
 .menumain__title {
   font-weight: lighter;
@@ -404,6 +440,7 @@ a {
   background-color: #fff;
   display: flex;
   border-radius: 0.75rem;
+  padding: 1rem;
   box-shadow: 0 2px 7px #767676;
   overflow: hidden;
   cursor: pointer;
@@ -417,15 +454,22 @@ a {
 }
 .menu-card__item--title {
   font-size: 1.2rem;
+  margin: 0;
+}
+.menu-card__item--description {
+  margin: 0;
+  overflow: hidden;
 }
 .menu-card__price {
   font-weight: 900;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  padding-left: 0.5rem;
 }
 .menu-card__confirmation {
   background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
   width: 4rem;
   display: flex;
   align-items: center;
@@ -435,6 +479,13 @@ a {
 
 .delay {
   animation-delay: 0s;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 4rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

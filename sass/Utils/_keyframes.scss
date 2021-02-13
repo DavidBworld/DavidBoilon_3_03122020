@@ -6,20 +6,24 @@
   } 
 @keyframes transform-load {
   0% {
+    visibility:visible;
     opacity: 0;
     transform: translateX(-300px);
   }
   33% {
     opacity: 1;
     transform: translateX(0px);
+    visibility:visible;
   }
   66% {
     opacity: 1;
     transform: translateX(0px);
+    visibility:visible;
   }
   100% {
     opacity: 0;
     transform: translateX(300px);
+    visibility:hidden;
   }
 }
 @keyframes itemtranslate{
@@ -30,3 +34,20 @@
       transform: scale(1)
   }
 }  
+@keyframes progress-heart {
+  0% {
+      background-color: $color-primary;
+  }
+  17% {
+      background-color: $color-primary;
+  }
+  24% {
+      background-color: $color-primary;
+  }
+  46% {
+      background-color: $color-primary;    
+  }
+  100% {
+      background-color: $color-primary;
+  }
+}

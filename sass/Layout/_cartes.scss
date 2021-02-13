@@ -1,3 +1,7 @@
+.menus{
+    display: grid;
+    grid-template-rows: 3fr;
+}
 .menu{
     background: $color-searchback;
     display: flex;
@@ -15,25 +19,30 @@
     &__title{
         font-family: 'Shrikhand';
         font-size: 1.9rem;
-        margin-left: -1rem;
+        margin-left: -0.5rem;
     } 
     &__btn {
         border: transparent 0px solid; 
     }
 }   
 .menu__purple {
-    &--test{
-        color: $color-searchback;
-        background-color: black;
+    &--test > fa-heart{
+        /*color: $color-searchback;*/
+        background-color: $color-searchback;
         border-radius: 50%;
+        position:relative;
+        opacity:1;    
+        
         &::before {
             content: "\f004";
-            font-weight: bold;
             transition: color 1s ease-out;
+            animation: progress-heart 1000ms ease-in-out; 
         }
         &:hover::before{
                 color: $color-primary;
+
                 cursor: pointer;
+                
         }
     }   
 }     
@@ -47,6 +56,7 @@
     max-width: 100%;
     overflow: hidden;
     padding: 0 1rem;
+    padding-bottom: 2rem;
     &__title{
         font-weight:lighter;   
     }
@@ -62,6 +72,7 @@
     background-color: #fff;
     display: flex;
     border-radius: .75rem;
+    padding:1rem;
     box-shadow: 0 2px 7px $color-searchbord;
     overflow: hidden;
     cursor: pointer;
@@ -71,8 +82,14 @@
     transform: scale(0);
     &__item{
         flex:1;
+
         &--title{
         font-size: 1.2rem;
+        margin:0;
+        }
+        &--description{
+            margin:0;
+            overflow: hidden;
         }
     }
     &__price{
@@ -80,10 +97,11 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        padding-left: 0.5rem;
     }
     &__confirmation{
     background-color: #99e2d0;
-
+    margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
     display: flex;
     align-items: center;
@@ -93,5 +111,11 @@
 }
 .delay{
     animation-delay: 0s;
+}
+.order{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 4rem 0;
 }
 
