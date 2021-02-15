@@ -448,17 +448,26 @@ a {
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
   transform: scale(0);
+  /*&:hover &__wrapIcon {
+      transform: rotate(0);
+    }*/
 }
 .menu-card__item {
   flex: 1;
+  overflow: hidden;
 }
 .menu-card__item--title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: "[..]";
 }
 .menu-card__item--description {
   margin: 0;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-card__price {
   font-weight: 900;
@@ -466,6 +475,7 @@ a {
   justify-content: flex-end;
   align-items: flex-end;
   padding-left: 0.5rem;
+  overflow: hidden;
 }
 .menu-card__confirmation {
   background-color: #99e2d0;
@@ -474,11 +484,28 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: 0.5s;
+  transition: all 500ms ease-in-out;
+}
+.menu-card:hover .menu-card__confirmation {
+  margin-right: -1rem;
+}
+.menu-card__wrapicon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  /*transform: rotate(180deg);
+  transition-duration: 0.5s;*/
+}
+.menu-card__wrapicon--icon {
+  color: #99E2D0;
 }
 
-.delay {
-  animation-delay: 0s;
+.time {
+  animation-delay: 150ms;
 }
 
 .order {

@@ -82,14 +82,20 @@
     transform: scale(0);
     &__item{
         flex:1;
+        overflow: hidden;
 
         &--title{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin:0;
+        overflow:hidden;
+        white-space: nowrap;
+        text-overflow: "[..]";
         }
         &--description{
             margin:0;
             overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     }
     &__price{
@@ -98,6 +104,7 @@
         justify-content: flex-end;
         align-items: flex-end;
         padding-left: 0.5rem;
+        overflow: hidden;
     }
     &__confirmation{
     background-color: #99e2d0;
@@ -106,11 +113,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-duration: .5s;
+    transition: all 500ms ease-in-out;
     }
+    &:hover &__confirmation {
+        margin-right: -1rem;
+    }
+    &__wrapicon {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 100px;
+        /*transform: rotate(180deg);
+        transition-duration: 0.5s;*/
+        &--icon {
+            color: $color-tertiary;
+        }
+    }
+    /*&:hover &__wrapIcon {
+        transform: rotate(0);
+      }*/
+
 }
-.delay{
-    animation-delay: 0s;
+.time{
+    animation-delay: 150ms;
 }
 .order{
     display:flex;
