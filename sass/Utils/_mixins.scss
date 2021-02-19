@@ -49,6 +49,11 @@ background-image: -webkit-linear-gradient(bottom, rgb(255, 121, 217) 0%, rgb(146
 background-image: -ms-linear-gradient(bottom, rgb(255, 121, 217) 0%, rgb(146, 86, 220) 100%);
 background-image: linear-gradient(to bottom, rgb(255, 121, 217) 0%, rgb(146, 86, 220) 100%);
 }
+@mixin media($width) {
+    @media only screen and (min-width: $width) {
+      @content;
+    }
+  }
 
 
 

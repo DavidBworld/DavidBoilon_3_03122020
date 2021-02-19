@@ -2,11 +2,20 @@
     background: $color-searchback;
     padding: 1.3rem 1.1rem 0 1.1rem;
     padding-bottom: 4rem;
+    @include media(1024px) {
+    padding: 2rem 2rem 4rem 2rem;
+    }
 }
 .cards{
     display:grid;
-    grid-template-rows: 4fr;
+    grid-template-columns: 1fr;
     grid-row-gap:1rem;
+    @include media(1024px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        grid-column-gap: 2rem;
+        grid-row-gap:2rem;
+      }
 }
 .card{
     border-radius: 1rem 1rem 1rem 1rem; 

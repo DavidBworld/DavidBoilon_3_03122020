@@ -10,6 +10,10 @@
     background-color: $color-icon;
     padding: 0.8rem 0 0 1.3rem;
     height:12rem;
+    @include media(1024px){
+        height:8rem;
+        padding: 2rem 0 0 2rem;
+    }
     &__logo{
         color:white;
         font-family: 'Shrikhand';
@@ -22,6 +26,9 @@
         display: grid;
         grid-template-rows: 4fr;
         grid-row-gap: 0.3rem;
+        @include media(1024px){
+            grid-template-columns: repeat(4,1fr);
+        }
     }
     &__icon{
         width:2rem;

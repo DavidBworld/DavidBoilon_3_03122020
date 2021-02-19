@@ -18,6 +18,10 @@
     }
     &__btn{
         @include button;
+        @include media(1024px) {
+            height: 4rem;
+            width: 40%;
+        }   
     }
 }
    

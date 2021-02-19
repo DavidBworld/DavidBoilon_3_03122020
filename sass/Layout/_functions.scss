@@ -11,6 +11,11 @@
         display:grid;
         grid-template-rows: 3fr;
         grid-row-gap: 1rem;
+        @include media(1024px) {
+            display:flex;
+            justify-content: space-around;
+            grid-column-gap: 4rem;
+          }
     }
     &__choice{
         background: $color-searchback;
@@ -21,6 +26,9 @@
         display: flex;
         align-items: center;
         position:relative;
+        @include media(1024px) {
+            flex:1;
+        }
         &::before {
             counter-increment: compteListe;
             content: counter( compteListe ) " ";
