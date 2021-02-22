@@ -434,7 +434,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 @media only screen and (min-width: 1024px) {
   .menu__header {
@@ -449,19 +449,38 @@ a {
   border: transparent 0px solid;
 }
 
-.menu__purple--test > fa-heart {
-  /*color: $color-searchback;*/
-  background-color: #f6f6f6;
+/*.menu__purple {
+    &--test > fa-heart{
+        color: $color-searchback;
+        background-color: $color-searchback;
+        border-radius: 50%;
+        position:relative;
+        opacity:1;    
+
+        &::before {
+            content: "\f004";
+            transition: color 1s ease-out;
+            animation: progress-heart 1000ms ease-in-out; 
+        }
+        &:hover::before{
+                color: $color-primary;
+
+                cursor: pointer;
+
+        }
+    }   
+}*/
+.fa-heart {
   border-radius: 50%;
-  position: relative;
-  opacity: 1;
+  padding: 0.2em;
 }
-.menu__purple--test > fa-heart::before {
+
+.fa-heart::before {
   content: "";
   transition: color 1s ease-out;
-  animation: progress-heart 1000ms ease-in-out;
 }
-.menu__purple--test > fa-heart:hover::before {
+
+.fa-heart:hover::before {
   color: #9356DC;
   cursor: pointer;
 }
@@ -508,9 +527,6 @@ a {
   animation-timing-function: cubic-bezier(0.34, 0.01, 0.18, 1);
   animation-fill-mode: both;
   transform: scale(0);
-  /*&:hover &__wrapIcon {
-      transform: rotate(0);
-    }*/
 }
 .menu-card__item {
   flex: 1;
@@ -557,11 +573,14 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  /*transform: rotate(180deg);
-  transition-duration: 0.5s;*/
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
 }
 .menu-card__wrapicon--icon {
   color: #99E2D0;
+}
+.menu-card:hover .menu-card__wrapIcon {
+  transform: rotate(0);
 }
 
 .time {
