@@ -43,6 +43,18 @@ a {
     transform: translateX(0px);
     visibility: visible;
   }
+  44% {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: translateY(0.5rem);
+    visibility: visible;
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: translateY(-0.5rem);
+    visibility: visible;
+  }
   66% {
     opacity: 1;
     transform: translateX(0px);
@@ -65,18 +77,41 @@ a {
 @keyframes progress-heart {
   0% {
     background-color: #9356DC;
+    transform: scale(1);
   }
   17% {
     background-color: #9356DC;
+    transform: scale(1.1);
   }
   24% {
     background-color: #9356DC;
+    transform: scale(1.2);
   }
   46% {
     background-color: #9356DC;
+    transform: scale(1.1);
   }
   100% {
     background-color: #9356DC;
+    transform: scale(1);
+  }
+}
+@keyframes menustranslate {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .loader {
@@ -317,6 +352,10 @@ a {
   font-size: 0.9rem;
 }
 
+.color {
+  background-color: #f2eafb;
+}
+
 .iconcolor {
   color: #9356DC;
 }
@@ -449,39 +488,20 @@ a {
   border: transparent 0px solid;
 }
 
-/*.menu__purple {
-    &--test > fa-heart{
-        color: $color-searchback;
-        background-color: $color-searchback;
-        border-radius: 50%;
-        position:relative;
-        opacity:1;    
-
-        &::before {
-            content: "\f004";
-            transition: color 1s ease-out;
-            animation: progress-heart 1000ms ease-in-out; 
-        }
-        &:hover::before{
-                color: $color-primary;
-
-                cursor: pointer;
-
-        }
-    }   
-}*/
-.fa-heart {
+.menu__purple--test > fa-heart {
+  color: #f6f6f6;
+  background-color: #f6f6f6;
   border-radius: 50%;
-  padding: 0.2em;
+  position: relative;
+  opacity: 1;
 }
-
-.fa-heart::before {
+.menu__purple--test > fa-heart::before {
   content: "";
   transition: color 1s ease-out;
+  animation: progress-heart 1000ms ease-in-out;
 }
-
-.fa-heart:hover::before {
-  color: #9356DC;
+.menu__purple--test > fa-heart:hover::before {
+  fill: #9356DC;
   cursor: pointer;
 }
 
@@ -576,15 +596,43 @@ a {
   transform: rotate(180deg);
   transition-duration: 0.5s;
 }
-.menu-card__wrapicon--icon {
-  color: #99E2D0;
-}
-.menu-card:hover .menu-card__wrapIcon {
+.menu-card:hover .menu-card__wrapicon {
   transform: rotate(0);
 }
+.menu-card__icon {
+  color: #99E2D0;
+}
 
-.time {
+.menu-card:nth-child(1) {
   animation-delay: 150ms;
+}
+
+.menu-card:nth-child(2) {
+  animation-delay: 300ms;
+}
+
+.menu-card:nth-child(3) {
+  animation-delay: 450ms;
+}
+
+.menu-card:nth-child(4) {
+  animation-delay: 600ms;
+}
+
+.menu-card:nth-child(5) {
+  animation-delay: 750ms;
+}
+
+.menu-card:nth-child(6) {
+  animation-delay: 900ms;
+}
+
+.menu-card:nth-child(7) {
+  animation-delay: 1050ms;
+}
+
+.menu-card:nth-child(8) {
+  animation-delay: 1200ms;
 }
 
 .order {

@@ -54,6 +54,9 @@
         font-size: 0.9rem;
     }
 }
+.color{
+    background-color: lighten($color-primary, 35%) ;
+}
 .iconcolor{
     color: $color-primary;
 }

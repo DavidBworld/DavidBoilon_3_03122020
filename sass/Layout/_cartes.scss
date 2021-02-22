@@ -30,7 +30,7 @@
         border: transparent 0px solid; 
     }
 }   
-/*.menu__purple {
+.menu__purple {
     &--test > fa-heart{
         color: $color-searchback;
         background-color: $color-searchback;
@@ -44,26 +44,12 @@
             animation: progress-heart 1000ms ease-in-out; 
         }
         &:hover::before{
-                color: $color-primary;
-
+                fill: $color-primary;
                 cursor: pointer;
                 
         }
     }   
-}*/
-.fa-heart {
-    border-radius: 50%;
-    padding:0.2em;
-    }
-    .fa-heart::before {
-    content: "\f004";
-    transition: color 1s ease-out;
-
-    }
-    .fa-heart:hover::before{
-    color: $color-primary;
-    cursor: pointer;
-    }
+}
 .menumain{
     display: grid;
     grid-row-gap: 1rem;
@@ -147,19 +133,23 @@
         border-radius: 100px;
         transform: rotate(180deg);
         transition-duration: 0.5s;
-        &--icon {
-            color: $color-tertiary;
-        }
     }
-    &:hover &__wrapIcon {
+    &:hover &__wrapicon {
         transform: rotate(0);
-          }
+    }
+    &__icon {
+        color: $color-tertiary;
+    }
 
 
 }
-.time{
-    animation-delay: 150ms;
-}
+@for $i from 1 to 9 {
+    .menu-card{
+        &:nth-child(#{$i}) {
+      animation-delay:  $i *(1500ms / 10);
+    }
+  }
+}  
 .order{
     display:flex;
     justify-content: center;

@@ -4,8 +4,10 @@
   "description": "Ohmyfood! est une entreprise de commande de repas en ligne",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "David Boilon",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }

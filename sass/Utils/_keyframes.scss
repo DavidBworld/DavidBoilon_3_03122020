@@ -9,10 +9,23 @@
     visibility:visible;
     opacity: 0;
     transform: translateX(-300px);
+
   }
   33% {
     opacity: 1;
     transform: translateX(0px);
+    visibility:visible;
+  }
+  44%{
+    opacity: 1;
+    transform: translateX(0px);
+    transform: translateY(0.5rem);
+    visibility:visible;
+  }
+  55%{
+    opacity: 1;
+    transform: translateX(0px);
+    transform: translateY(-0.5rem);
     visibility:visible;
   }
   66% {
@@ -37,17 +50,42 @@
 @keyframes progress-heart {
   0% {
       background-color: $color-primary;
+      transform:scale(1)
   }
   17% {
       background-color: $color-primary;
+      transform:scale(1.1)
   }
   24% {
       background-color: $color-primary;
+      transform:scale(1.2)
   }
   46% {
-      background-color: $color-primary;    
+      background-color: $color-primary;
+      transform:scale(1.1)    
   }
   100% {
       background-color: $color-primary;
+      transform:scale(1)
+  }
+}
+@keyframes menustranslate {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(20px);
+
+  }
+  66% {
+    opacity: 1;
+    transform: translateY(10px);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
