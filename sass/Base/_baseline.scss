@@ -38,10 +38,6 @@ $color-searchback: #f6f6f6;
 
 $color-btn : linear-gradient(to top, $color-primary 10%, $color-secondary);
 $btn-shadow : 0 2px 7px $color-searchbord;
-@mixin media($width) {
-  @media only screen and (max-width: $width) {
-    @content;
-  }
-}
+
 
 

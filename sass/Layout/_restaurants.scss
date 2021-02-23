@@ -22,6 +22,7 @@
     box-sizing: border-box;
     box-shadow: 0 2px 7px $color-searchbord;
     position: relative;
+
     &__img{
         height: 11rem;
         object-fit: cover;
@@ -43,21 +44,34 @@
         font-weight: 600;
         border-radius: 0.15rem;
     }
+    &__desc{
+        padding: 0 1rem 1rem 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
     &__content{
-        display:flex;
-        flex-direction: column;
-        padding-left: 1rem;
-        margin: -0.5rem 0 1rem 0;
+        flex:1;
         &--title{
             font-size: 1.1rem;
             margin-bottom: 0.2rem;
-        }
-        &--icon{
-            position: absolute;
-            right:1.3rem;
-            bottom: 2rem;
-            font-size: 1.5rem;
+            margin-top: 0.5rem;
         }
     }
+    &__btn {
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+    
+    &__heart {
+        background-color: white!important;
+    }
+    
 }
 

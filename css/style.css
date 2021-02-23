@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body {
   height: 100%;
   margin: 0;
@@ -74,44 +73,18 @@ a {
     transform: scale(1);
   }
 }
-@keyframes progress-heart {
+@keyframes progressheart {
   0% {
-    background-color: #9356DC;
-    transform: scale(1);
-  }
-  17% {
-    background-color: #9356DC;
-    transform: scale(1.1);
-  }
-  24% {
-    background-color: #9356DC;
-    transform: scale(1.2);
-  }
-  46% {
-    background-color: #9356DC;
-    transform: scale(1.1);
-  }
-  100% {
-    background-color: #9356DC;
-    transform: scale(1);
-  }
-}
-@keyframes menustranslate {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: scaleY(0);
   }
   33% {
-    opacity: 1;
-    transform: translateY(20px);
+    transform: translateY(0.3);
   }
   66% {
-    opacity: 1;
-    transform: translateY(10px);
+    transform: translateY(0.6);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(1);
   }
 }
 .loader {
@@ -416,21 +389,32 @@ a {
   font-weight: 600;
   border-radius: 0.15rem;
 }
-.card__content {
+.card__desc {
+  padding: 0 1rem 1rem 1rem;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  padding-left: 1rem;
-  margin: -0.5rem 0 1rem 0;
+  align-items: center;
+}
+.card__content {
+  flex: 1;
 }
 .card__content--title {
   font-size: 1.1rem;
   margin-bottom: 0.2rem;
+  margin-top: 0.5rem;
 }
-.card__content--icon {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 2rem;
-  font-size: 1.5rem;
+.card__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__heart {
+  background-color: white !important;
 }
 
 .return {
@@ -452,7 +436,6 @@ a {
 
 .menus {
   display: grid;
-  grid-template-rows: 3fr;
 }
 @media only screen and (min-width: 1024px) {
   .menus {
@@ -485,24 +468,45 @@ a {
   font-size: 1.9rem;
 }
 .menu__btn {
-  border: transparent 0px solid;
-}
-
-.menu__purple--test > fa-heart {
-  color: #f6f6f6;
-  background-color: #f6f6f6;
-  border-radius: 50%;
-  position: relative;
-  opacity: 1;
-}
-.menu__purple--test > fa-heart::before {
-  content: "";
-  transition: color 1s ease-out;
-  animation: progress-heart 1000ms ease-in-out;
-}
-.menu__purple--test > fa-heart:hover::before {
-  fill: #9356DC;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  border: transparent 0rem solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+.menu__btn:hover::before {
+  opacity: 1;
+  /*animation: progressheart 1500ms;
+  animation-timing-function: cubic-bezier(.34,.01,.18,1);
+  transform-origin: 50% bottom;*/
+}
+.menu__btn::before {
+  content: "";
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #9356DC 10%, #FF79DA);
+}
+.menu__heart {
+  background-color: #f6f6f6;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: lighten;
+}
+.menu__btn:hover .menu__heart--heartempty {
+  opacity: 0;
 }
 
 .menumain {
@@ -516,6 +520,7 @@ a {
 @media only screen and (min-width: 1024px) {
   .menumain {
     grid-row-gap: 2rem;
+    align-content: start;
   }
 }
 .menumain__title {
@@ -633,6 +638,10 @@ a {
 
 .menu-card:nth-child(8) {
   animation-delay: 1200ms;
+}
+
+.menu-card:nth-child(9) {
+  animation-delay: 1350ms;
 }
 
 .order {
