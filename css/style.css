@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html, body {
   height: 100%;
   margin: 0;
@@ -154,6 +156,7 @@ a {
   color: white;
   font-family: "Shrikhand";
   font-size: 1.2rem;
+  letter-spacing: 0.1em;
 }
 .footer__list {
   list-style: none;
@@ -251,7 +254,7 @@ a {
   left: 0;
   border-radius: 3rem;
   box-shadow: 0 2px 7px #5f0b0b;
-  background: rgba(247, 245, 245, 0.1);
+  background: rgba(160, 111, 111, 0.1);
   /*background: linear-gradient(TO TOP lighten($color-primary,10%) 10%, lighten($color-secondary,100%) 10%);*/
   opacity: 0;
   z-index: -1;
