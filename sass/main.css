@@ -153,44 +153,6 @@ a {
   }
 }
 
-@-webkit-keyframes progressheart {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-  33% {
-    -webkit-transform: translateY(0.3);
-            transform: translateY(0.3);
-  }
-  66% {
-    -webkit-transform: translateY(0.6);
-            transform: translateY(0.6);
-  }
-  100% {
-    -webkit-transform: translateY(1);
-            transform: translateY(1);
-  }
-}
-
-@keyframes progressheart {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-  33% {
-    -webkit-transform: translateY(0.3);
-            transform: translateY(0.3);
-  }
-  66% {
-    -webkit-transform: translateY(0.6);
-            transform: translateY(0.6);
-  }
-  100% {
-    -webkit-transform: translateY(1);
-            transform: translateY(1);
-  }
-}
-
 .loader {
   position: fixed;
   height: 100%;
