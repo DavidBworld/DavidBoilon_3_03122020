@@ -15,8 +15,21 @@ Vous pouvez retrouver le [brief complet ici](https://s3-eu-west-1.amazonaws.com/
 
 ### Pages à intégrer selon les maquettes
 
-- **Page d’accueil**
-- **Pages de menu (x4)**
+
+### Page d’accueil (x1)
+- [x] Affichage de la localisation des restaurants. À terme il sera possible de choisir sa
+localisation pour trouver des restaurants proches d’un certain lieu.
+- [x] Une courte présentation de l’entreprise.
+- [x] Une section contenant les 4 menus sous forme cartes. Au clic sur la carte,
+l’utilisateur est redirigé vers la page du menu.
+- [x] Sur la page d’accueil, il contient le logo du site.
+
+### 4 pages contenant chacune le menu d’un restaurant.
+- [x] Le footer est identique sur toutes les pages.
+- [x] Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.
+Header
+- [x] Le header est présent sur toutes les pages.
+- [x] Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accuei
 
 ### Animation
 
